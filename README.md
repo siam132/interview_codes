@@ -1,1 +1,1 @@
-# interview_codes
+# Technical interview problems 
