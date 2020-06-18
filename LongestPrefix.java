@@ -2,7 +2,7 @@
 public class LongestPrefix {
 
     public static void main(String[] args) {
-        String [] strArr = {"dog","racecar","car"};
+        String [] strArr = {"racecar","racar"};
 
         System.out.println(LongPref(strArr));
     }

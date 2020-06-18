@@ -21,7 +21,6 @@ class DecompressList {
 
             while (freq != 0) {
                 list.add(val);
-                System.out.println(val);
                 freq--;
             }
         }
