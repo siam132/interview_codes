@@ -224,7 +224,7 @@ class ThreeSum {
 
         long start = System.currentTimeMillis();
         System.out.println(threeSum(arr).toString());
-        System.out.println("Elapsed Time: " + (System.currentTimeMillis()-start)+" ms");
+        System.out.println("Elapsed Time: " + (System.currentTimeMillis() - start) + " ms");
     }
 
     public static List<List<Integer>> threeSum(int[] nums) {
@@ -237,7 +237,7 @@ class ThreeSum {
             highPtr = i + 1;
             lowPtr = nums.length - 1;
             while (highPtr < lowPtr) {
-                if (sumIsZero(nums[i], nums[highPtr], nums[lowPtr]).equals("match")) {
+                if (nums[i] + nums[highPtr] + nums[lowPtr] == 0) {
                     List<Integer> temp = new ArrayList<>();
                     temp.add(nums[i]);
                     temp.add(nums[highPtr]);
@@ -247,11 +247,12 @@ class ThreeSum {
                     }
                     highPtr++;
                     lowPtr--;
-                } else if (sumIsZero(nums[i], nums[highPtr], nums[lowPtr]).equals("tooHigh")) {
+                } else if ((nums[i] + nums[highPtr] + nums[lowPtr] > 0)) {
                     lowPtr--;
-                } else if (sumIsZero(nums[i], nums[highPtr], nums[lowPtr]).equals("tooLow")) {
+                } else if ((nums[i] + nums[highPtr] + nums[lowPtr] < 0)) {
                     highPtr++;
                 }
+
             }
         }
 
@@ -259,15 +260,4 @@ class ThreeSum {
 
     }
 
-    public static String sumIsZero(int currPtr, int high, int low) {
-        int sum = currPtr + high + low;
-
-        if (sum == 0) {
-            return "match";
-        } else if (sum > 0) {
-            return "tooHigh";
-        } else {
-            return "tooLow";
-        }
-    }
 }
