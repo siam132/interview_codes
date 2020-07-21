@@ -1,5 +1,3 @@
-import java.lang.reflect.Array;
-
 class PlusOne {
 
     public static void main(String[] args) {
