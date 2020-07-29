@@ -2,7 +2,7 @@ class RemoveElement {
 
     public static void main(String[] args) {
         int[] arr = { 1,1,2};
-        int val = 1;
+        // int val = 1;
         System.out.println(removeDpl(arr));
         for (int x : arr)
             System.out.printf("%d|", x);
