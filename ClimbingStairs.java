@@ -1,6 +1,8 @@
+import java.util.Arrays;
+
 class ClimbingStairs {
     public static void main(String[] args) {
-        System.out.println(climbStairs(4));
+        System.out.println(climbStairs(6));
     }
 
     public static int climbStairs(int n) {
@@ -9,9 +11,7 @@ class ClimbingStairs {
         if (n == 2)
             return 2;
         int[] cache = new int[n + 1];
-        for (int i = 0; i < cache.length; i++)
-            cache[i] = 0;
-
+        Arrays.fill(cache,0); 
         cache[1] = 1;
         cache[2] = 2;
 

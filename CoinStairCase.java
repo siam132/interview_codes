@@ -8,7 +8,7 @@ class CoinStairCase {
     // n is a non-negative integer and fits within the range of a 32-bit signed
     // integer.
     public static void main(String[] args) {
-        System.out.println(arrangeCoins(3));
+        System.out.println(arrangeCoins(Integer.MAX_VALUE));
     }
 
     public static int arrangeCoins(int n) {
