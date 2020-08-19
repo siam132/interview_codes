@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+
 
 class ShuffleArray {
     public static void main(String[] args) {
@@ -11,16 +11,25 @@ class ShuffleArray {
     }
 
     public static int[] shuffle(int[] nums, int n) {
-       ArrayList<Integer> al = new ArrayList<>();
-       int f = 0; 
-       int s = n;  
+        // ArrayList<Integer> al = new ArrayList<>();
+        // int f = 0;
+        // int s = n;
 
+        // for (int i = 0; i < nums.length; i += 2) {
+        // al.add(i, nums[f++]);
+        // al.add(i+1,nums[s++]);
+        // }
+
+        // return al.stream().mapToInt(i -> i).toArray();
+
+        int[] retArr = new int[nums.length];
+        int f = 0;
+        int s = n;
         for (int i = 0; i < nums.length; i += 2) {
-           al.add(i, nums[f++]);
-           al.add(i+1,nums[s++]); 
+            retArr[i] = nums[f++];
+            retArr[i + 1] = nums[s++];
         }
-
-        return  al.stream().mapToInt(i -> i).toArray();
+        return retArr;
 
     }
 }
